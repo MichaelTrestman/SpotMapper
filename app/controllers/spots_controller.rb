@@ -2,7 +2,15 @@ class SpotsController < ApplicationController
   # before_filter :find_spot
 
   def index
-
+    @spot = find_spot
+    @list = @spot.list
+    @spots = @list.spots
+    render :json => {
+      :success=>true,
+      :id =>@spot.id,
+      :list => @list,
+      :spots => @spots
+    }
   end
 
   def create
@@ -23,7 +31,7 @@ class SpotsController < ApplicationController
 
 
 
-  # def find_spot
-  #   @spot = Spots.find(params[:id]) if params[:id]
-  # end
+  def find_spot
+    @spot = Spots.find(params[:id]) if params[:id]
+  end
 end

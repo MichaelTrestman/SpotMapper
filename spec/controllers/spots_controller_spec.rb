@@ -31,4 +31,14 @@ describe SpotsController do
       end
     end
   end
+  describe "#index" do
+    let!(:spot1) { FactoryGirl.create :spot }
+    let!(:spot2) { FactoryGirl.create :spot }
+    let!(:list) {FactoryGirl.create :list}
+    it "does something" do
+      get :index, list_id: list.id
+      x = JSON.parse(response.body)
+      expect(x[:success]).to be true
+    end
+  end
 end
