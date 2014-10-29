@@ -11,9 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20141029031611) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "lists", force: true do |t|
+    t.string "description"
+    t.string "title"
+  end
+
+  create_table "spots", force: true do |t|
+    t.string  "title"
+    t.integer "collection_id"
+    t.string  "description"
+    t.decimal "lat"
+    t.decimal "lng"
+    t.string  "address"
+    t.text    "pov"
+    t.string  "link"
+  end
 
 end
