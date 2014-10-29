@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>P10take2</title>
+  <%=javascript_include_tag "https://maps.googleapis.com/maps/api/js?v=3.exp&"%>
+  <%= stylesheet_link_tag    'application'%>
+
+  <%= javascript_include_tag 'application' %>
+
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div id='map-canvas'></div>
+<%= yield %>
+
+</body>
+</html>
