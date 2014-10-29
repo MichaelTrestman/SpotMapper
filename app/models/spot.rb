@@ -5,7 +5,7 @@ class Spot < ActiveRecord::Base
   validates :lat, numericality: true
   validates :lng, presence: true
   validates :lng, numericality: true
-  belongs_to :collection
+  belongs_to :list
 
 
 end
