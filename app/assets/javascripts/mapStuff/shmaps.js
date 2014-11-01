@@ -1,18 +1,19 @@
-
+var Map = {};
 
 var initialize = function(){
 
-  myLatlng = new google.maps.LatLng(40.85, -96.75);
+  var Latlng = new google.maps.LatLng(40.85, -96.75);
 
-  mapOptions = {
+  var mapOptions = {
     zoom: 2,
-    center: myLatlng
+    center: Latlng
   }
 
-  map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-  map.setMapTypeId(google.maps.MapTypeId.SATELLITE);
+  Map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+  Map.setMapTypeId(google.maps.MapTypeId.SATELLITE);
 }
 
-$(document).ready(function(){
+$(document).ready(
+  function(){
   initialize();
 })

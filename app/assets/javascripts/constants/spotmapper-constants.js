@@ -1,0 +1,5 @@
+var SpotMapperConstants = {
+  CREATE_SPOT: 'CREATE_SPOT',
+  UPDATE_SPOT: 'UPDATE_SPOT',
+  DESTROY_SPOT: 'DESTROY_SPOT'
+}

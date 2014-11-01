@@ -2,3 +2,20 @@ html, body, #map-canvas{
   height: 100%;
   width: 100%;
 }
+
+#spot-list {
+  position: fixed;
+  left: 10%;
+  bottom: 10%;
+  height: 5%;
+  width: 5%;
+  background-color:rgba(15,15,15, 0.3);
+      transition: .5s;
+  color: white;
+
+}
+#spot-list:hover {
+  background-color:rgba(15,15,15, 0.7);
+  height: 55%;
+  width: 25%;
+}
