@@ -35,8 +35,11 @@ var SpotDisplay = React.createClass({displayName: 'SpotDisplay',
       return (
         // <Spot object={this.state.spotOnDisplay.spot}/>
 
-        React.DOM.div(null, " yay", 
-          Spot({key: spt.id, spot: spt, errors: this.state.errors})
+        React.DOM.div(null, 
+          Spot({key: spt.id, spot: spt, errors: this.state.errors}), 
+
+          React.DOM.h1(null, spt.title), 
+          React.DOM.p(null, spt.description)
         )
       )
     }

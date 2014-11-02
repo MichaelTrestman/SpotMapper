@@ -18,11 +18,17 @@ var Spot = React.createClass({displayName: 'Spot',
       React.DOM.div({className: "spot"}, 
         this.renderSpot(), 
         React.DOM.a({href: "#spot_display", onClick: this.displaySpot}, 
-          "Display Spot"
+          "Display  |"
+        ), 
+        React.DOM.a({href: "#", onClick: this.editSpot}, 
+          "|  Edit"
         )
       )
 
     )
+  },
+  editSpot: function(){
+    alert('edit spot!!')
   },
   displaySpot: function(){
     //this function needs to tell everybody else to like display the spot display panel and shit, recenter the map, everything.
