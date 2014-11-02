@@ -16,7 +16,6 @@ var SpotList = React.createClass({displayName: 'SpotList',
   },
   componentDidMount: function(){
     SpotStore.addChangeEvent(function(){
-      console.log('fuck should be changing!')
       this.setState({
         spots: SpotStore.spots()
       })
@@ -26,7 +25,6 @@ var SpotList = React.createClass({displayName: 'SpotList',
   render: function(){
     var spots = [];
     if (this.state.spots) {
-      console.log(this.state.spots)
       this.state.spots.forEach(
         function(spt){
           spots.push(

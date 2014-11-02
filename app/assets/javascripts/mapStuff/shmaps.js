@@ -1,20 +1,20 @@
-var Map = {};
+// var Map = {};
 
-var initialize = function(){
+// var initialize = function(){
 
-  var Latlng = new google.maps.LatLng(40.85, -96.75);
+//   var Latlng = new google.maps.LatLng(40.85, -96.75);
 
-  var mapOptions = {
-    zoom: 2,
-    center: Latlng
-  }
+//   var mapOptions = {
+//     zoom: 2,
+//     center: Latlng
+//   }
 
-  Map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-  Map2 = new google.maps.Map(document.getElementById('map-canvas2'), mapOptions);
-  Map.setMapTypeId(google.maps.MapTypeId.SATELLITE);
-}
+//   Map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+//   Map2 = new google.maps.Map(document.getElementById('map-canvas2'), mapOptions);
+//   Map.setMapTypeId(google.maps.MapTypeId.SATELLITE);
+// }
 
-$(document).ready(
-  function(){
-  initialize();
-})
+// $(document).ready(
+//   function(){
+//   initialize();
+// })
