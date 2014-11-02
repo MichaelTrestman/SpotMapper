@@ -10,6 +10,7 @@ var initialize = function(){
   }
 
   Map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+  Map2 = new google.maps.Map(document.getElementById('map-canvas2'), mapOptions);
   Map.setMapTypeId(google.maps.MapTypeId.SATELLITE);
 }
 

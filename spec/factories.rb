@@ -30,6 +30,5 @@ FactoryGirl.define do
     factory :list do
       title {  Faker::Lorem.sentence(rand(2))}
       description {Faker::Lorem.sentence(rand(12))}
-      id {1}
     end
 end

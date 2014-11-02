@@ -15,3 +15,5 @@ end
 
 gem 'jquery-rails'
 gem 'turbolinks'
+gem 'active_model_serializers'
+

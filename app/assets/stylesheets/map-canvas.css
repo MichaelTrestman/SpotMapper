@@ -4,18 +4,63 @@ html, body, #map-canvas{
 }
 
 #spot-list {
-  position: fixed;
+  left: 75%;
+}
+#collection-list{
   left: 10%;
-  bottom: 10%;
-  height: 5%;
-  width: 5%;
-  background-color:rgba(15,15,15, 0.3);
-      transition: .5s;
+}
+#spot-show {
+  left: 45%;
+}
+
+
+.nav-item {
+  bottom: 0%;
+  height: 10%;
+  width: 15%;
+  background-color:rgba(5,5,5, 0.9);
   color: white;
+  position: fixed;
+  transition: .5s;
+  text-align: center;
 
 }
-#spot-list:hover {
-  background-color:rgba(15,15,15, 0.7);
-  height: 55%;
+.nav-item:hover {
+  height: 85%;
   width: 25%;
+}
+#nav-bar {
+  position: fixed;
+  bottom: 0%;
+  height: 10%;
+  left: 0%;
+  width: 100%;
+  background-color:rgba(15,15,15, 0.3);
+  display: flex;
+  flex-direction: row;
+}
+
+.spot-listy {
+  height: 85%;
+  /*background-color:rgba(021,091,221, 0.3);*/
+}
+.nav-item ul {
+  list-style: none;
+  margin-left: 0px;
+  text-align: left;
+  padding: 3%;
+  height: 85%;
+  border: solid 1px white;
+  overflow: scroll;
+}
+
+.nav-item li {
+  text-align: left;
+  padding: 2%;
+  font-size: 2em;
+}
+
+.spot {
+  color: white;
+  border: solid 1px white;
 }

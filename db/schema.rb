@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20141029031611) do
   create_table "spots", force: true do |t|
     t.string  "title"
     t.integer "list_id"
-    t.string  "description"
+    t.text    "description"
     t.decimal "lat"
     t.decimal "lng"
     t.string  "address"

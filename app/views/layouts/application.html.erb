@@ -10,9 +10,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<div id='map-canvas'></div>
-<div id='spot-list'></div>
+<div id='map-canvas'>
+</div>
+  <div id='map-canvas2'></div>
+<div id="nav-bar">
+  <div class="nav-item" id='spot-list' class='spot'><h1>Spot List</h1></div>
+  <div class="nav-item" id='collection-list'><h1>Collections</h1></div>
+  <div class="nav-item" id='spot-show'><h1>Spot</h1></div>
+</div>
 <%= yield %>
 
 

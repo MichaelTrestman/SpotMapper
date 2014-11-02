@@ -11,6 +11,10 @@ describe SpotsController do
   let(:spot_params) {
     FactoryGirl.attributes_for :spot
   }
+  let(:spot1) { FactoryGirl.create :spot }
+    let(:spot2) { FactoryGirl.create :spot }
+    let(:list) {FactoryGirl.create :list}
+
   describe "#create" do
     context 'with valid spot params' do
       it "creates a new spot"  do
@@ -30,15 +34,21 @@ describe SpotsController do
         expect(Spot.count).to eq 1
       end
     end
-  end
-  describe "#index" do
-    let!(:spot1) { FactoryGirl.create :spot }
-    let!(:spot2) { FactoryGirl.create :spot }
-    let!(:list) {FactoryGirl.create :list}
-    it "does something" do
-      get :index, list_id: list.id
-      x = JSON.parse(response.body)
-      expect(x[:success]).to be true
+    describe "#index" do
+
+      it "does something" do
+        # p spot_params
+        Spot.create({title: 'shitfart'})
+
+        get :index, list_id: list.id
+        x = JSON.parse(response.body)
+        puts "*********"
+        p Spot.all
+        puts "*********"
+        # expect(x[:success]).to be true
+        expect(response.body).to eq({"spots" => ActiveModel::ArraySerializer.new(Spot.all)}.to_json)
+      end
     end
   end
+
 end

@@ -1,3 +1,5 @@
+//= require dispatcher
+
 var SpotMapperDispatcher = $.extend(new Dispatcher(), {
 
   handleServerAction: function(action){

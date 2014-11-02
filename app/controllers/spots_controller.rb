@@ -2,15 +2,19 @@ class SpotsController < ApplicationController
   # before_filter :find_spot
 
   def index
-    @spot = find_spot
-    @list = @spot.list
-    @spots = @list.spots
-    render :json => {
-      :success=>true,
-      :id =>@spot.id,
-      :list => @list,
-      :spots => @spots
-    }
+    # puts "***********"
+    # p params
+    # puts "***********"
+    # @spot = find_spot
+    # @list = find_list
+    # @spots = @list.spots
+    # render :json => {
+    #   :success=>true,
+    #   :id =>@spot.id,
+    #   :list => @list,
+    #   :spots => @spots
+    # }
+    render :json => Spot.all
   end
 
   def create
@@ -29,9 +33,12 @@ class SpotsController < ApplicationController
     params.require(:spot).permit(:title, :lat, :lng, :list_id)
   end
 
-
-
   def find_spot
     @spot = Spots.find(params[:id]) if params[:id]
+    #what is the logic here is this fucked up??
+  end
+  def find_list
+    @list = List.find(params[:list_id]) if params[:list_id]
+    #what is the logic here is this fucked up??
   end
 end
