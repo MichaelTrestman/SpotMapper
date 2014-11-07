@@ -14,6 +14,11 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+/config/database.yml
+.module-cache
+*.DS_Store
+
 app/assets/javascripts/react/.module-cache/manifest/66dcb3cdb75cd2b298d613f3954c836f824ed608.json
 app/assets/javascripts/react/.module-cache/manifest/68441c449bf70414ae9d4d480e54dcde322cd692.json
 app/assets/javascripts/react/.module-cache/manifest/70a1cc9b9168ca2a00f17627e926b081291453bb.json
