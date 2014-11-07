@@ -8,7 +8,6 @@
   # belongs_to :list
 
 
-
 FactoryGirl.define do
     factory :spot do
 
@@ -23,7 +22,6 @@ FactoryGirl.define do
       lng {rand(180*2)-180}
 
       list_id {1}
-
 
 
     end

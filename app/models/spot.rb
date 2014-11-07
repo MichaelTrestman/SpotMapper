@@ -6,6 +6,8 @@ class Spot < ActiveRecord::Base
   # validates :lng, presence: true
   # validates :lng, numericality: true
   belongs_to :list
+  geocoded_by :address
+  after_validation :geocode
 
 
 end

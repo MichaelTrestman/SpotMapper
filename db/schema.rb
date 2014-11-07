@@ -17,19 +17,23 @@ ActiveRecord::Schema.define(version: 20141029031611) do
   enable_extension "plpgsql"
 
   create_table "lists", force: true do |t|
-    t.string "description"
-    t.string "title"
+    t.string   "description"
+    t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "spots", force: true do |t|
-    t.string  "title"
-    t.integer "list_id"
-    t.text    "description"
-    t.decimal "lat"
-    t.decimal "lng"
-    t.string  "address"
-    t.text    "pov"
-    t.string  "link"
+    t.string   "title"
+    t.integer  "list_id"
+    t.text     "description"
+    t.decimal  "lat"
+    t.decimal  "lng"
+    t.string   "address"
+    t.text     "pov"
+    t.string   "link"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

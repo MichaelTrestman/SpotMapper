@@ -9,6 +9,7 @@ class CreateSpots < ActiveRecord::Migration
       t.string :address
       t.text :pov
       t.string :link
+      t.timestamps
     end
   end
 end
