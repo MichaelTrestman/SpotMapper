@@ -13,7 +13,13 @@ var Collection = React.createClass({
   },
   render: function(){
     return(
-      <div></div>
+      <div className="collection">
+        {this.renderCollection()}
+        <a href="#collection_display" onClick={this.displayCollection}>Display  |</a>
+        <a href="#" onClick={this.editCollection}>
+          |  Edit
+        </a>
+      </div>
     )
   }
 

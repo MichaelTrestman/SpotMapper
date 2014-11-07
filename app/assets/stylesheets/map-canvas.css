@@ -7,10 +7,11 @@ html, body, #map-canvas{
   left: 75%;
 }
 #collection-list{
-  left: 10%;
+  left: 5%;
+  color: white;
 }
 #spot-display {
-  left: 45%;
+  left: 15%;
 }
 
 
@@ -18,7 +19,7 @@ html, body, #map-canvas{
   bottom: 0%;
   height: 10%;
   width: 15%;
-  background-color:rgba(5,5,5, 0.9);
+  background-color:rgba(15,15,15, 0.3);
   color: white;
   position: fixed;
   transition: .5s;
@@ -28,6 +29,7 @@ html, body, #map-canvas{
 .nav-item:hover {
   height: 85%;
   width: 25%;
+  background-color:rgba(15,15,15, 0.9);
 }
 #nav-bar {
   position: fixed;
@@ -42,25 +44,56 @@ html, body, #map-canvas{
 
 .spot-listy {
   height: 85%;
-  /*background-color:rgba(021,091,221, 0.3);*/
+
 }
 .nav-item ul {
+  background-color:rgba(21,21,21, 0.3);
+  color: black;
   list-style: none;
   margin-left: 0px;
   text-align: left;
   padding: 3%;
   height: 85%;
   border: solid 1px white;
+  border-radius: 5%;
   overflow: scroll;
 }
 
 .nav-item li {
+  font-family:sans-serif;
   text-align: left;
   padding: 2%;
   font-size: 2em;
+  background-color:rgba(11,11,11, 0.8);
+  color: white;
 }
 
 .spot {
-  color: white;
+  color: black;
   border: solid 1px white;
+  cursor: move;
+ color: #fff;
+  text-shadow: #000 0 1px;
+  box-shadow: 5px;
+  padding: 5px;
+  /*background: -moz-linear-gradient(left center, rgb(0,0,0), rgb(79,79,79), rgb(21,21,21));*/
+  background: -webkit-gradient(linear, left top, right top,
+                               color-stop(0, rgb(0,0,0)),
+                               color-stop(0.50, rgb(79,79,79)),
+                               color-stop(1, rgb(21,21,21)))
+  border-bottom: 1px solid #ddd;
+  /*-webkit-border-top-left-radius: 10px;
+  -moz-border-radius-topleft: 10px;
+  -ms-border-radius-topleft: 10px;*/
+  border-radius: 10%;
+  -webkit-border-top-right-radius: 10px;
+  -ms-border-top-right-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  border-top-right-radius: 10px;
+}
+}
+
+
+.nav-item.over {
+  border: 2px dashed #000;
 }

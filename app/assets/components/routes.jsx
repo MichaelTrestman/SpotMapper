@@ -3,10 +3,15 @@
  */
 //= require router
 //= require react/spotList
+//= require react/collectionList
 //= require react/spotDisplay
 
 
 Router.routes = (function(){
+  var _collection_list = function(){
+    React.unmountComponentAtNode(document.getElementById('collection-list'));
+      React.render(<CollectionList />, document.getElementById('collection-list'))
+  }
   var _spot_list = function(){
     React.unmountComponentAtNode(document.getElementById('spot-list'));
     React.render(<SpotList />, document.getElementById('spot-list'));
@@ -19,6 +24,8 @@ Router.routes = (function(){
 
   }
   return {
+    '#': _collection_list,
+    '#collection_list': _collection_list,
     "#spot_list": _spot_list,
     "#spot_display": _spot_display
   }

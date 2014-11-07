@@ -16,8 +16,17 @@
     # t.string  "link"
     # var crazyVolcanoPlace ={"position":{"k":42.497667,"B":141.14683300000002},"pov":{"heading":108.15742692732572,"pitch":12.716486667265169}}
 
-    50.times do
+
+
+    3.times do
       title = Faker::Lorem.sentence(rand(6))
       description = Faker::Lorem.paragraph(rand(6))
-      Spot.create({title: title, description: description})
+      list = List.create({title: title, description: description})
+
+        3.times do
+          title = Faker::Lorem.sentence(rand(6))
+          description = Faker::Lorem.paragraph(rand(6))
+          list.spots << Spot.create({title: title, description: description})
+        end
+
     end
